@@ -1,0 +1,7 @@
+Programa Python Resumo Interativo
+
+1 - Saída e Entrada de Dados - Básico
+
+2 - Tipos de Variáveis - Declarações e Atribuições
+
+3 - Operações Básicas com Variáveis
