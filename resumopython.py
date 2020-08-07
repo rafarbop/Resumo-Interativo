@@ -17,54 +17,74 @@ def titulo(wellcome):
             break
     print("\n* ",wellcome.title()," *",sep='', end='\n\n')
 
-titulo("Bem Vindo ao Resumo de Python feito com Python")
-
 def input_output_basics():
+    os.system('clear')
     titulo("Demostrações Básicas de Entrada e Saída de Dados em Python:")
     print("CONTEUDO","CONTEUDO","CONTEUDO","CONTEUDO","CONTEUDO","CONTEUDO\n")
     saida_resumo = input("Deseja finalizar o programa ou voltar ao menu inicial?\n0 - Finalizar\n1 - Voltar ao Menu Inicial\n:")
+    print()
     if saida_resumo == '0':
-        print()
+        os.system('clear')
         sys.exit()
-    else:
-        print()
+    if saida_resumo == '1':
         start_menu()
+    else:
+        print("Voçe digitou uma opção inválida!")
+        input()
+        input_output_basics()
 
 def var_basics():
+    os.system('clear')
     titulo("Veremos como utilizamos variáveis e quais os tipos existentes em python:")
     print("CONTEUDO","CONTEUDO","CONTEUDO","CONTEUDO","CONTEUDO","CONTEUDO\n")
     saida_resumo = input("Deseja finalizar o programa ou voltar ao menu inicial?\n0 - Finalizar\n1 - Voltar ao Menu Inicial\n:")
+    print()
     if saida_resumo == '0':
-        print()
+        os.system('clear')
         sys.exit()
-    else:
-        print()
+    if saida_resumo == '1':
         start_menu()
+    else:
+        print("Voçe digitou uma opção inválida!")
+        input()
+        var_basics()
 
 def operation_basics():
+    os.system('clear')
     titulo("Vamos rever quais são e como funcionam as principais operações básicas com variáveis em python:")
     print("CONTEUDO","CONTEUDO","CONTEUDO","CONTEUDO","CONTEUDO","CONTEUDO\n")
     saida_resumo = input("Deseja finalizar o programa ou voltar ao menu inicial?\n0 - Finalizar\n1 - Voltar ao Menu Inicial\n:")
+    print()
     if saida_resumo == '0':
-        print()
+        os.system('clear')
         sys.exit()
-    else:
-        print()
+    if saida_resumo == '1':
         start_menu()
+    else:
+        print("Voçe digitou uma opção inválida!")
+        input()
+        operation_basics()
 
 def not_definied():
+    os.system('clear')
     titulo("Menu ainda em desenvolvimento - Wait a little longer!")
     print("CONTEUDO","CONTEUDO","CONTEUDO","CONTEUDO","CONTEUDO","CONTEUDO\n")
     saida_resumo = input("Deseja finalizar o programa ou voltar ao menu inicial?\n0 - Finalizar\n1 - Voltar ao Menu Inicial\n:")
+    print()
     if saida_resumo == '0':
-        print()
+        os.system('clear')
         sys.exit()
-    else:
-        print()
+    if saida_resumo == '1':
         start_menu()
+    else:
+        print("Voçe digitou uma opção inválida!")
+        input()
+        not_definied()
 
 
 def start_menu():
+    os.system('clear')
+    titulo("Bem Vindo ao Resumo de Python feito com Python")
     print("Escolha qual assunto deseja revisar os principais conceitos e funções:\n")
     print("\t1 - Saída e Entrada de Dados - Básico")
     print("\t2 - Tipos de Variáveis - Declarações e Atribuições")
@@ -72,23 +92,25 @@ def start_menu():
     print("\t4 - ...")
     print("\n\t0 - Finalizar Programa!")
     option_menu = input("\n- Digite um número de acordo com as opções acima: ".upper())
+    print()
     if option_menu == '0':
-        print()
         return
     if option_menu == '1':
-        print()
         input_output_basics()
     if option_menu == '2':
-        print()
         var_basics()
     if option_menu == '3':
-        print()
         operation_basics()
     if option_menu == '4':
-        print()
         not_definied()
+    else:
+        print("Voçe digitou uma opção inválida!")
+        input()
+        start_menu()
 
 start_menu()
+
+os.system('clear')
 
 #print("Voçe digitou a opção {}!".format(option_menu))
 #print(f"Voçe digitou a opção {option_menu}!")
