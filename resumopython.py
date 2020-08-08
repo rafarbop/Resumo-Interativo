@@ -22,15 +22,25 @@ def limpar_tela():
 
 def input_output_basics():
     limpar_tela()
-    titulo("Demostrações Básicas de Entrada e Saída de Dados em Python:")
-    print("Em Python3 usamos a função print() para exibir valores, palavras ou o retorno de outra função na saida padrão.")
-    print("\tExemplo de código:")
-    print('\t'+(len('print(2)')*2+4)*'-')
-    print('\t>>> print(2)')
-    print('\t{}'.format(2))
-    print('\t'+(len('print(2)')*2+4)*'-')
-    print("CONTEUDO","CONTEUDO","CONTEUDO","CONTEUDO","CONTEUDO","CONTEUDO\n")
-    saida_resumo = input("Deseja finalizar o programa ou voltar ao menu inicial?\n0 - Finalizar\n1 - Voltar ao Menu Inicial\n:")
+    titulo("Demostrações Básicas de Entrada e Saída de Dados em Python")
+    print("Imprimir valores, palavras ou variáveis na saida padrão:".upper())
+    n = 1
+    print(f'>>> n = 1')
+    x = fr"print(2,'teste', n ,sep=' ',end='\n')"
+    print(f'>>> {x}')
+    print(' ',2,'teste', n ,end='\n\v')
+
+    print("Receber entrada de dados:".upper())
+    x = fr"variavel = input('Digite um valor ou uma mensagem:')"
+    print(f'>>> {x}')
+    print('Digite um valor ou uma mensagem:')
+    print(f' teste')
+    print(fr">>> print(variavel)")
+    print(f' teste')
+
+
+
+    saida_resumo = input("\n\nDeseja finalizar o programa ou voltar ao menu inicial?\n0 - Finalizar\n1 - Voltar ao Menu Inicial\n:")
     print()
     if saida_resumo == '0':
         limpar_tela()
@@ -74,7 +84,7 @@ def operation_basics():
         input()
         operation_basics()
 
-def not_definied():
+def nao_definido():
     limpar_tela()
     titulo("Menu ainda em desenvolvimento - Wait a little longer!")
     print("CONTEUDO","CONTEUDO","CONTEUDO","CONTEUDO","CONTEUDO","CONTEUDO\n")
@@ -88,7 +98,7 @@ def not_definied():
     else:
         print("Voçe digitou uma opção inválida!")
         input()
-        not_definied()
+        nao_definido()
 
 
 def start_menu():
@@ -111,7 +121,7 @@ def start_menu():
     if option_menu == '3':
         operation_basics()
     if option_menu == '4':
-        not_definied()
+        nao_definido()
     else:
         print("Voçe digitou uma opção inválida!")
         input()
