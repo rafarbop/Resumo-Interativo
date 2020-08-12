@@ -23,20 +23,36 @@ def limpar_tela():
 def input_output_basics():
     limpar_tela()
     titulo("Demostrações Básicas de Entrada e Saída de Dados em Python")
+
     print("Imprimir valores, palavras ou variáveis na saida padrão:".upper())
-    n = 1
-    print(f'>>> n = 1')
-    x = fr"print(2,'teste', n ,sep=' ',end='\n')"
-    print(f'>>> {x}')
-    print(' ',2,'teste', n ,end='\n\v')
+    var_interna_1 = len("Imprimir valores, palavras ou variáveis na saida padrão:")
+    print(var_interna_1*'-')
+
+    print("Comando:")
+    print('\t'+r"print(numero, var_qualquer, True, 'string',f'string {var_qualquer}') ou")
+    print('\t'+r"print('string {} e {:.2f}'.format(var_qualquer,var_numero),sep=' ',end='\n')")
+    print('\nOBS.:\nVários argumentos com print() é só separar por ,')
+    print("sep=' ' é o separador padrão entre os argumentos e end='\\n' é o fim de linha padrão.'")
+    print('Usar aspas simples ou duplas.')
+    print(':.2f irá retorna um número com 2 casas decimais.')
+    print('print() irá apenas pular uma linha.')
+
+    print(var_interna_1*'-')
+    print()
 
     print("Receber entrada de dados:".upper())
-    x = fr"variavel = input('Digite um valor ou uma mensagem:')"
-    print(f'>>> {x}')
-    print('Digite um valor ou uma mensagem:')
-    print(f' teste')
-    print(fr">>> print(variavel)")
-    print(f' teste')
+    var_interna_1 = len("Receber entrada de dados:")
+    print(var_interna_1*'-')
+
+    print('Comando:')
+    print('\t'+r"input('Texto a ser mostrado antes da entrada de dados: ')")
+    print('\nOBS.:\nFunção input retorna sempre uma string.')
+    print('input() irá esperar ser digitado Enter - Não salva nada do que foi digitado')
+    print('Aceita mesmas opções de formatação que print(), porém input() so aceita 1 argumento')
+    
+
+    print(var_interna_1*'-')
+    print()
 
 
 
