@@ -1,124 +1,119 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-import subprocess, sys
+import subprocess, sys, time
 
 # Resumo de Python através de um menu no terminal
 # com opções qual assunto deseja ver o resumo.
 
 
-def titulo(wellcome):
-    i = len(wellcome)+4
-    erro = 0
-    while i > 0:
-        print("_",sep='', end='')
-        i = i - 1
-        erro = erro +1
-        if erro == 500:
-            break
-    print("\n* ",wellcome.title()," *",sep='', end='\n\n')
+def titulo(texto_titulo):
+    i = len(texto_titulo)+4
+    print("\n> ",texto_titulo.upper()," <",sep='')
+    print(i*"^",sep='')
 
-def limpar_tela():
-    retorno_limpar_tela = subprocess.run(['clear'])
+def subtitulo(texto_subtitulo):
+    i = len(texto_subtitulo)+6
+    print(i*"_",sep='')
+    print("\n>> ",texto_subtitulo.title()," <<",sep='')
+
+def cabecalho():
+    subprocess.run(['clear'])
+    texto_cabecalho = 'Resumo em Python'
+    print(len(texto_cabecalho.center(50,'-'))*'-')
+    print(texto_cabecalho.center(50,'-'))
+    print(len(texto_cabecalho.center(50,'-'))*'=')
+
 
 def input_output_basics():
-    limpar_tela()
+    cabecalho()
     titulo("Demostrações Básicas de Entrada e Saída de Dados em Python")
 
-    print("Imprimir valores, palavras ou variáveis na saida padrão:".upper())
-    var_interna_1 = len("Imprimir valores, palavras ou variáveis na saida padrão:")
-    print(var_interna_1*'-')
-
-    print("Comando:")
+    subtitulo("Imprimir valores, palavras ou variáveis na saida padrão:".upper())
+    print("   Comando:")
     print('\t'+r"print(numero, var_qualquer, True, 'string',f'string {var_qualquer}') ou")
     print('\t'+r"print('string {} e {:.2f}'.format(var_qualquer,var_numero),sep=' ',end='\n')")
-    print('\nOBS.:\nVários argumentos com print() é só separar por ,')
-    print("sep=' ' é o separador padrão entre os argumentos e end='\\n' é o fim de linha padrão.'")
-    print('Usar aspas simples ou duplas.')
-    print(':.2f irá retorna um número com 2 casas decimais.')
-    print('print() irá apenas pular uma linha.')
+    print('\n   OBS.:\n   Vários argumentos com print() é só separar por ,')
+    print("   sep=' ' é o separador padrão entre os argumentos e end='\\n' é o fim de linha padrão.'")
+    print('   Usar aspas simples ou duplas.')
+    print('   :.2f irá retorna um número com 2 casas decimais.')
+    print('   print() irá apenas pular uma linha.')
 
-    print(var_interna_1*'-')
-    print()
-
-    print("Receber entrada de dados:".upper())
-    var_interna_1 = len("Receber entrada de dados:")
-    print(var_interna_1*'-')
-
-    print('Comando:')
+    subtitulo("Receber entrada de dados:".upper())
+    print('   Comando:')
     print('\t'+r"input('Texto a ser mostrado antes da entrada de dados: ')")
-    print('\nOBS.:\nFunção input retorna sempre uma string.')
-    print('input() irá esperar ser digitado Enter - Não salva nada do que foi digitado')
-    print('Aceita mesmas opções de formatação que print(), porém input() so aceita 1 argumento')
+    print('\n   OBS.:\n   Função input retorna sempre uma string.')
+    print('   input() irá esperar ser digitado Enter - Não salva nada do que foi digitado')
+    print('   Aceita mesmas opções de formatação que print(), porém input() so aceita 1 argumento')
     
-
-    print(var_interna_1*'-')
-    print()
-
-
-
     saida_resumo = input("\n\nDeseja finalizar o programa ou voltar ao menu inicial?\n0 - Finalizar\n1 - Voltar ao Menu Inicial\n:")
     print()
     if saida_resumo == '0':
-        limpar_tela()
+        subprocess.run(['clear'])
         sys.exit()
     if saida_resumo == '1':
         start_menu()
     else:
         print("Voçe digitou uma opção inválida!")
-        input()
+        time.sleep(1)
         input_output_basics()
 
 def var_basics():
-    limpar_tela()
+    cabecalho()
     titulo("Veremos como utilizamos variáveis e quais os tipos existentes em python:")
-    print("CONTEUDO","CONTEUDO","CONTEUDO","CONTEUDO","CONTEUDO","CONTEUDO\n")
+
+    subtitulo("CONTEUDO "+"CONTEUDO "+"CONTEUDO "+"CONTEUDO "+"CONTEUDO "+"CONTEUDO\n")
+
     saida_resumo = input("Deseja finalizar o programa ou voltar ao menu inicial?\n0 - Finalizar\n1 - Voltar ao Menu Inicial\n:")
     print()
     if saida_resumo == '0':
-        limpar_tela()
+        subprocess.run(['clear'])
         sys.exit()
     if saida_resumo == '1':
         start_menu()
     else:
         print("Voçe digitou uma opção inválida!")
-        input()
+        time.sleep(1)
         var_basics()
 
 def operation_basics():
-    limpar_tela()
+    cabecalho()
     titulo("Vamos rever quais são e como funcionam as principais operações básicas com variáveis em python:")
-    print("CONTEUDO","CONTEUDO","CONTEUDO","CONTEUDO","CONTEUDO","CONTEUDO\n")
+
+    subtitulo("CONTEUDO"+"CONTEUDO"+"CONTEUDO"+"CONTEUDO"+"CONTEUDO"+"CONTEUDO\n")
+
     saida_resumo = input("Deseja finalizar o programa ou voltar ao menu inicial?\n0 - Finalizar\n1 - Voltar ao Menu Inicial\n:")
     print()
     if saida_resumo == '0':
-        limpar_tela()
+        subprocess.run(['clear'])
         sys.exit()
     if saida_resumo == '1':
         start_menu()
     else:
         print("Voçe digitou uma opção inválida!")
-        input()
+        time.sleep(1)
         operation_basics()
 
 def nao_definido():
-    limpar_tela()
+    cabecalho()
     titulo("Menu ainda em desenvolvimento - Wait a little longer!")
-    print("CONTEUDO","CONTEUDO","CONTEUDO","CONTEUDO","CONTEUDO","CONTEUDO\n")
+
+    subtitulo("CONTEUDO"+"CONTEUDO"+"CONTEUDO"+"CONTEUDO"+"CONTEUDO"+"CONTEUDO\n")
+
     saida_resumo = input("Deseja finalizar o programa ou voltar ao menu inicial?\n0 - Finalizar\n1 - Voltar ao Menu Inicial\n:")
     print()
     if saida_resumo == '0':
-        limpar_tela()
+        subprocess.run(['clear'])
         sys.exit()
     if saida_resumo == '1':
         start_menu()
     else:
         print("Voçe digitou uma opção inválida!")
-        input()
+        time.sleep(1)
         nao_definido()
 
 
 def start_menu():
-    limpar_tela()
+    cabecalho()
     titulo("Bem Vindo ao Resumo de Python feito com Python")
     print("Escolha qual assunto deseja revisar os principais conceitos e funções:\n")
     print("\t1 - Saída e Entrada de Dados - Básico")
@@ -140,12 +135,12 @@ def start_menu():
         nao_definido()
     else:
         print("Voçe digitou uma opção inválida!")
-        input()
+        time.sleep(1)
         start_menu()
 
 start_menu()
 
-limpar_tela()
+subprocess.run(['clear'])
 
 #print("Voçe digitou a opção {}!".format(option_menu))
 #print(f"Voçe digitou a opção {option_menu}!")
